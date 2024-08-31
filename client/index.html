@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soldiers</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+</head>
+<body>
+    <main class="container">
+        <h1>Soldiers</h1>
+        <nav>
+            <a href="#" onclick="handleCreateSoldierClick(event)">Create a Soldier</a>
+        </nav>
+        <div id="errors"></div>
+
+        <section id="list-section">
+            <h3>All Soldiers</h3>
+            <table class="table table-dark table-striped">
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Middle Initial</th>
+                        <th>Last Name</th>
+                        <th>Date of Birth</th>
+                        <th>Height</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="list-contents">
+
+                </tbody>
+            </table>
+        </section>
+
+        <section id="form-section" hidden>
+            <h3>Soldier Form</h3>
+            <form id="form" onsubmit="handleFormSubmit(event)">
+                <div class="form-group">
+                    <label for="first-input">First Name:</label>
+                    <input type="text" id="first-input" class="form-control" />
+                </div>
+
+                <div class="form-group">
+                    <label for="middle-input">Middle Initial:</label>
+                    <input type="text" id="middle-input" class="form-control" />
+                </div>
+
+                <div class="form-group">
+                    <label for="last-input">Last Name:</label>
+                    <input type="text" id="last-input" class="form-control" />
+                </div>
+                
+                <div class="form-group">
+                    <label for="dob-input">Date of Birth:</label>
+                    <input type="date" id="dob-input" class="form-control" />
+                </div>
+                
+                <div class="form-group">
+                    <label for="height-input">Height:</label>
+                    <input type="number" id="height-input" class="form-control" />
+                </div>
+                
+                <div class="form-group">
+                    <input type="submit" class="btn btn-primary" value="Submit!" />
+                </div>
+                <a href="#" class="btn btn-danger" onclick="handleLinkClick(event, 'list-section')">Cancel</a>
+            </form>
+        </section>
+    </main>
+    <script type="application/javascript" src="./code.js"></script>
+</body>
+
+</html>
